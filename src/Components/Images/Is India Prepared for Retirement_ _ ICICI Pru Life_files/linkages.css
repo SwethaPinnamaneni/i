@@ -1,0 +1,181 @@
+/* Website Linkages */
+
+/* Claim Settlement Ratio */
+.csr-value:before{
+	content: "98.7%";
+}
+.csr-fy:before{
+	content: "FY 2020-21";
+}
+
+/* Product UINs */
+.ips-uin:before{
+	content: "105N151V10";
+}
+.hnc-uin:before{
+	content: "105N154V03";
+}
+.signature-uin:before{
+	content: "105L177V06";
+}
+.pru1wealth-uin:before{
+	content: "105L175V03";
+}
+.ltc-uin:before{
+	content: "105L155V08";
+}
+.smartlife-uin:before{
+	content: "105L145V08";
+}
+.smartkid-uin:before{
+	content: "105L145V08";
+}
+.gwp-uin:before{
+	content: "105L143V02";
+}
+.asip-uin:before{
+	content: "105N144V09";
+}
+.sp-uin:before{
+	content: " 105N184V07";
+}
+.gpp-uin:before{
+	content: "105N181V03";
+}
+.fp-uin:before{
+	content: "105N153V02";
+}
+.ca-uin:before{
+	content: "105N132V02";
+}
+.ss-uin:before{
+	content: "105N135V03";
+}
+.er-uin:before{
+	content: "105L133V03";
+}
+.gift-uin:before{
+	content: "105N182V08";
+}
+.ersp-uin:before{
+	content: "105L138V03";
+}
+.ia-uin:before{
+	content: "105N009V15";
+}
+.gift-lt-uin:before{
+	content: "105N185V14";
+}
+.icare-uin:before{
+	content: "105N140V03";
+}
+.loan-protect-uin:before{
+	content: "105N150V03";
+}
+.life-raksha-uin:before{
+	content: "105N149V02";
+}
+.gift-pro:before{
+	content: "105N201V02";
+}
+.ezygrow-uin:before{
+	content: "105189V03";
+}
+.sjb-uin:before{
+	content: "105N183V01";
+}
+.pl-uin:before{
+	content: "105N178V01";
+}
+.pos-ips-uin:before{
+	content: "105N173V03";
+}
+.uladr-uin:before{
+	content: "105A025V01";
+}
+.pos-lr-uin:before{
+	content: "105N174V02";
+}
+.sl-uin:before{
+	content: "105L145V08";
+}
+.lw-uin:before{
+	content: "105N179V01";
+}
+.lli-uin:before{
+	content: "105N179V01";
+}
+.gpp-flexi-uin:before{
+	content: "105N187V04";
+}
+.ips-rop-uin:before{
+	content: "105N186V01";
+}
+.gtp-uin:before{
+	content: "105N119V07";
+}
+.pgain-uin:before{
+	content: "105L191V02";
+}
+.accidental-death-rider:before{
+	content: "105A025V01";
+}
+
+/* SFIN */
+.maximiser-sfin:before{
+	content: "ULIF 114 15/03/11 LMaximis5 105";
+}
+.multicapGrowth-sfin:before{
+	content: "ULIF 085 24/11/09 LMCapGro 105";
+}
+.multicapBalanced-sfin:before{
+	content: "ULIF 088 24/11/09 LMCapBal 105";
+}
+.opportunities-sfin:before{
+	content: "ULIF 086 24/11/09 LOpport 105";
+}
+.bluechip-sfin:before{
+	content: "ULIF 087 24/11/09 LBluChip 105";
+}
+.income-sfin:before{
+	content: "ULIF 089 24/11/09 LIncome 105";
+}
+.moneyMarket-sfin:before{
+	content: "ULIF 090 24/11/09 LMoneyMkt 105";
+}
+.maximiseIndia-sfin:before{
+	content: "ULIF 136 11/20/14 MIF 105";
+}
+.aaa-sfin:before{
+	content: "ULIF 138 15/02/17 AAABF 105";
+}
+.valueEnhancer-sfin:before{
+	content: "ULIF 139 24/11/17 VEF 105";
+}
+.secureOpportunities:before{
+	content: "ULIF 140 24/11/17 SOF 105";
+}
+.focus50-sfin:before{
+	content: "ULIF 142 04/02/19 FocusFifty 105";
+}
+.indiaGrowth-sfin:before{
+	content: "ULIF 141 04/02/19 IndiaGrwth 105";
+}
+.lifeGrowth-sfin:before{
+	content: "ULIF 134 19/09/13 LGF 105";
+}
+.lifeSecure-sfin:before{
+	content: "ULIF 135 19/09/13 LSF 105";
+}
+.lifeGrowth-sfin:before{
+	content: "ULIF 134 19/09/13 LGF 105";
+}
+
+/*Contact details*/
+
+.contact-number:before{
+	content:"1860 266 7766";
+}
+.international-contact-number:before{
+	content:"+91 80693 85555";
+}

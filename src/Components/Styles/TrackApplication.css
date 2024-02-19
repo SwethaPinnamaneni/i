@@ -1,0 +1,26 @@
+.tracking{
+    color: rgb(160,2,5);
+}
+.selection{
+    margin: 15px 71px 15px;
+
+}
+.icons{
+    padding-inline: 20px;
+    width: 500px;
+    margin-left: 385px;
+}
+.Personal{
+    padding:20px 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgb(160, 2, 0, 0.15)  2px 2px 2px 2px;
+    margin: 10px 90px 10px 90px;
+}
+.trackingimage{
+    
+        max-width: 100%;
+        padding-right: 500px;
+        margin-left: 255px;
+        margin-bottom: 10px;
+}    

@@ -1,0 +1,148 @@
+package com.icici.controllers;
+
+import java.util.Optional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.icici.entities.UserDetails;
+import com.icici.exceptions.OtpVerificationException;
+import com.icici.exceptions.UserNotFoundException;
+import com.icici.services.LoginService;
+
+@RestController
+@CrossOrigin(origins = "*")
+@RequestMapping("/logindetails")
+public class LoginController {
+
+    private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
+
+    @Autowired
+    private LoginService loginService;
+
+    /**
+     * Endpoint to send OTP to the provided email.
+     *
+     * @param mail The email address to which the OTP should be sent.
+     * @return The generated OTP.
+     */
+    @GetMapping("/send/{mail}")
+    public String sendMail(@PathVa,@PathVariable String aadhaarNumber) {
+        try {
+        	getEmailByAadhaar()
+            return loginService.sendMail(mail);
+        } catch (Exception e) {
+            logger.error("Error sending OTP to {}. Error: {}", mail, e.getMessage());
+            throw e; // Rethrow the exception for global handling or custom handling if needed
+        }
+    }
+    /**
+     * Endpoint to get email by Aadhaar number.
+     *
+     * @param aadhaarNumber The Aadhaar number of the user.
+     * @return The email address associated with the Aadhaar number.
+     */
+    @GetMapping("/getEmailByAadhaar/{aadhaarNumber}")
+    public String getEmailByAadhaar(@PathVariable String aadhaarNumber) {
+        try {
+            UserDetails userDetails = loginService.getMailByAadhaar(aadhaarNumber);
+            return userDetails.getEmail();
+        } catch (Exception e) {
+            logger.error("Error getting email by Aadhaar number {}. Error: {}", aadhaarNumber, e.getMessage());
+            throw e; // Rethrow the exception for global handling or custom handling if needed
+        }
+    }
+
+    /**
+     * Endpoint to verify OTP.
+     *
+     * @param mail The email address for which OTP verification is requested.
+     * @param otp  The OTP to be verified.
+     * @return true if the OTP is valid, false otherwise.
+     * @throws OtpVerificationException If OTP verification fails.
+     */
+    @PostMapping("/verify")
+    public boolean verifyOtp(@RequestParam String mail, @RequestParam String otp) throws OtpVerificationException {
+        try {
+            return loginService.verifyOtp(mail, otp);
+        } catch (OtpVerificationException e) {
+            logger.error("Error verifying OTP for {}. Error: {}", mail, e.getMessage());
+            throw e; // Rethrow the exception for global handling or custom handling if needed
+        }
+    }
+
+    
+
+    /**
+     * Endpoint to get user details by user ID.
+     *
+     * @param userId The ID of the user.
+     * @return ResponseEntity containing the user details.
+     * @throws UserNotFoundException If the user is not found.
+     */
+    @GetMapping("/UserDetails")
+    public ResponseEntity<Optional<UserDetails>> getDetails(@RequestParam("userId") int userId)
+            throws UserNotFoundException {
+        try {
+            Optional<UserDetails> userDetails = loginService.getUser(userId);
+            return ResponseEntity.ok(userDetails);
+        } catch (UserNotFoundException e) {
+            logger.error("User not found with ID {}. Error: {}", userId, e.getMessage());
+            throw e; // Rethrow the exception for global handling or custom handling if needed
+        }
+    }
+
+
+
+    /**
+     * Endpoint to save user details.
+     *
+     * @param userDetails The user details to be saved.
+     * @return ResponseEntity containing the saved user details.
+     * @throws UserNotFoundException If user details cannot be saved.
+     */
+    @PostMapping("/register")
+    public ResponseEntity<UserDetails> saveDetails(@RequestBody UserDetails userDetails) throws UserNotFoundException {
+        try {
+            UserDetails userData = loginService.saveUser(userDetails);
+            return ResponseEntity.ok(userData);
+        } catch (UserNotFoundException e) {
+            logger.error("Error saving user details. Error: {}", e.getMessage());
+            throw e; // Rethrow the exception for global handling or custom handling if needed
+        }
+    }
+
+
+
+    /**
+     * Endpoint to get user details by email.
+     *
+     * @param email The email address of the user.
+     * @return ResponseEntity containing the user details.
+     * @throws UserNotFoundException If the user is not found.
+     */
+    @GetMapping("/getUserbyEmail")
+    public ResponseEntity<UserDetails> getUserByEmail(@RequestParam("email") String email) throws UserNotFoundException {
+        try {
+            UserDetails user = loginService.getUserByEmail(email);
+            return ResponseEntity.ok(user);
+        } catch (UserNotFoundException e) {
+            logger.error("User not found with email {}. Error: {}", email, e.getMessage());
+            throw e; // Rethrow the exception for global handling or custom handling if needed
+        }
+    }
+
+
+
+    
+}

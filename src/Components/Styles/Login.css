@@ -1,0 +1,33 @@
+.formGroup{
+    /*max-width: 400px;
+    display:inline-block;
+    width:100%;
+    background: rgb(160, 2, 5);
+    padding:10px;
+    position:absolute;
+    left:50%;
+    top:60%;
+    transform: translate(-50%,-100%);
+    -webkit-transform: translate(50%,100%);
+    -moz-transform: translate(50%,100%);
+    -ms-transform: translate(50%,100%);
+    -o-transform: translate(50%,100%);
+    */padding: 20px 64px;
+    background: linear-gradient(#e97825,#cf562a,#b4332f);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;
+    margin: 178px 346px 185px 369px;
+    height: 300px;
+    width:550px;
+}
+.form_check{
+    padding-left: 10.5em !important;
+    padding-right: 8.5rem !important;
+}
+.formgroup{
+    padding:20px 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;
+    margin: 10px 90px 10px 90px;
+}

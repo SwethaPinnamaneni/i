@@ -1,0 +1,54 @@
+package com.icici.controllers;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import com.icici.entities.ClaimFAQs;
+import com.icici.services.ClaimFAQsService;
+
+@RestController
+@CrossOrigin(origins = "*")
+public class ClaimFAQsController {
+
+    private static final Logger logger = LoggerFactory.getLogger(ClaimFAQsController.class);
+
+    @Autowired
+    private ClaimFAQsService claimFAQsService;
+
+    /**
+     * Get the answer for a specific question by ID.
+     *
+     * @param questionId The ID of the question.
+     * @return The answer for the given question.
+     */
+    @GetMapping("/getAnswer")
+    public ResponseEntity<String> getAnswer(@RequestParam int questionId) {
+        try {
+            String answer = claimFAQsService.getAnswerById(questionId);
+            return ResponseEntity.ok(answer);
+        } catch (Exception e) {
+        	logger.error("Error retrieving answer for question ID {}: {}", questionId, e.getMessage(), e);
+            return ResponseEntity.status(500).body("Error retrieving answer");
+        }
+    }
+
+    /**
+     * Save a new FAQ (question and answer).
+     *
+     * @param claimFAQs The ClaimFAQs object to be saved.
+     * @return The saved ClaimFAQs object.
+     */
+    @PostMapping("/saveFAQ")
+    public ResponseEntity<ClaimFAQs> saveFAQ(@RequestBody ClaimFAQs claimFAQs) {
+      try {
+            ClaimFAQs savedFAQ = claimFAQsService.saveFAQ(claimFAQs);
+            return ResponseEntity.ok(savedFAQ);
+        } catch (Exception e) {
+        	logger.error("Error saving FAQ: {}", e.getMessage(), e);
+            return ResponseEntity.status(500).build(); // Internal Server Error
+        }
+    }
+}

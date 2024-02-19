@@ -1,0 +1,18 @@
+1705255185545	Delete element
+1705255205467	Move compilation unit
+1705569378499	Delete element
+1705569466583	Rename type 'SendingMail'
+1705571549567	Move 'MailController.java' to 'controllers'
+1705571555520	Delete element
+1705571609634	Rename resource 'SendingOTPthroughMail.java'
+1705571756968	Move 'implementations' to 'icici'
+1705571908870	Move 'MailService.java' to 'services'
+1705571925036	Move 'MailServiceImplementations.java' to 'implementations'
+1705571946771	Rename resource 'MailServiceImplementations.java'
+1705572532373	Move compilation unit
+1705572542428	Delete element
+1705572551678	Delete element
+1705583639576	Delete element
+1705583758537	Delete element
+1705583764301	Delete element
+1705583800224	Delete element

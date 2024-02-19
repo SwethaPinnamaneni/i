@@ -1,0 +1,65 @@
+.gradient_background {
+    background: linear-gradient(#e97825,#cf562a,#b4332f);
+    height: 100vh;
+    width: 100vw;
+  }
+  .Personal{
+    padding:20px 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;
+    margin: 10px 90px 10px 90px;
+}
+.btn-primary{
+    /* background-color: rgb(160,2,5); */
+    --bs-btn-color: rgb(160,2,5);
+    --bs-btn-bg: #fff;
+    --bs-btn-border-color: rgb(160,2,5);
+    --bs-btn-hover-color: rgb(160,2,5);
+    --bs-btn-hover-bg: #fff;
+    --bs-btn-hover-border-color: rgb(160,2,5);
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: rgb(160,2,5);
+    --bs-btn-active-border-color: rgb(160,2,5);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: rgb(160,2,5);
+    --bs-btn-disabled-border-color: rgb(160,2,5);
+}
+.image{
+    max-width: 100%;
+    padding-right: 174px;
+    margin-left: 212px;
+}
+[data-bs-theme=dark].carousel .carousel-indicators [data-bs-target] {
+    background-color: rgb(160,2,5) ;
+}
+.form-select{
+    width:487px !important;
+}
+@keyframes blink {
+    0%, 50%, 100% {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0;
+    }
+  }
+  
+  .blinking-badge {
+    animation: blink 1s infinite;
+  }
+  .icon{
+    /* margin: 40px 0; */
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    color: maroon ;
+    
+  }

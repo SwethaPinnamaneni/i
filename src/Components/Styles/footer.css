@@ -1,0 +1,18 @@
+footer{
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(160,2,5);;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    border-top: 1px solid rgb(160,2,5);
+    height: 430px;
+    color: white;
+    ;
+}
+.btn-primary{
+    --bs-btn-border-color: rgb(160,2,5);
+}

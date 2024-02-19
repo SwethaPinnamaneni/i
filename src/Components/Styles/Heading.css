@@ -1,0 +1,42 @@
+.head-container {
+    position: relative;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .top-heading {
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    transform: translateY(-50%);
+    color: #0f487e;
+    font-size: 45px;
+  }
+  
+  .button-container {
+    position: absolute;
+    bottom: 35px;
+    left: 253px;
+    width: 0%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .section-button {
+    padding: 4px 38px;
+    background-color: rgb(160,2,5);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .line {
+    height: 40px;
+    width: 1px;
+    background-color: #000; /* Match with the background color of the image */
+    margin: 0 4px; /* Adjust the spacing between buttons and line */
+  }
+  

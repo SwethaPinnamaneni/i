@@ -1,0 +1,33 @@
+
+h5,h6{
+  color: #0f487e;
+}
+  .card {
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 5rem;
+    margin-bottom: 5px;
+    
+  }
+  .timercard{
+    width: "30rem";
+  }
+ 
+  .form-check{
+    display: inline-block !important;
+  }
+  .contains{
+    width: 1170px;
+    margin-left: 47px;
+    text-align: left;
+  }
+  .accordion{
+    text-align: left;
+    --bs-accordion-btn-bg:#08486f;
+    --bs-accordion-btn-active-bg:rgb(160,5,2);
+    --bs-accordion-btn-color:#fff;
+    --bs-accordion-btn-icon:url("file:///C:/Users/spinnamaneni/iciciprulife/src/Components/Images/circle-plus-solid.svg");
+    --bs-accordion-btn-active-icon:url("file:///C:/Users/spinnamaneni/iciciprulife/src/Components/Images/circle-minus-solid.svg");
+  } 
+  .half-offcanvas {
+    height: 50%;
+  }
