@@ -62,7 +62,10 @@ export const ClaimFAQs = () => {
             </div>
 
             {activeHeader === item.headerValue && (
-              <div>{/* Render data fetched from the database */}</div>
+              <div>
+                {/* Render data fetched from the database */}
+                <div>This is swetha</div>
+              </div>
             )}
           </div>
         ))}
